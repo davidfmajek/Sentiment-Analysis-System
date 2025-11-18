@@ -5,7 +5,7 @@ from stemming import stemming
 
 # Naming the columns and reading the dataset 
 column_names = ['target', 'id', 'date', 'flag', 'user', 'tweet']
-twitter_data = pd.read_csv('/Users/davidmajek/Desktop/Python/X sentiment Analysis /twitter_data.csv', names=column_names, encoding='ISO-8859-1')
+twitter_data = pd.read_csv('twitter_data.csv', names=column_names, encoding='ISO-8859-1')
 
 # Converting the target value "4" to "1" (0 -> negative, 1 -> positive)
 twitter_data.replace({'target': {4: 1}}, inplace=True)
